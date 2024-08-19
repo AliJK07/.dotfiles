@@ -173,48 +173,32 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  environment.systemPackages =
-    (with pkgs; [
-      # (callPackage ../../pkgs/touchosc2midi {})
-      nix-template
-      microcodeIntel
-      xwaylandvideobridge
-      apvlv
-      krita
-      gcc
-      killall
-      appimage-run
-      unzip
-      p7zip
-      qbittorrent
-      home-manager
-      volantes-cursors
-      nitrogen
-      feh
-      neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      wget
-      kitty
-      alacritty
-      # fish
-      git
-      firefox
-      stow
-      pavucontrol
-      tldr
-      lazygit
-      xfce.thunar
-      xclip
-      thunderbird
-      btop
-      gamemode
-      mangohud
-      goverlay
-      piper
-      wally-cli
-    ])
-    ++ (with pkgs-stable; [
-      cemu
-    ]);
+  environment.systemPackages = with pkgs; [
+    nix-template
+    microcodeIntel
+    apvlv
+    killall
+    unzip
+    p7zip
+    qbittorrent
+    home-manager
+    volantes-cursors
+    nitrogen
+    feh
+    neovim
+    wget
+    kitty
+    alacritty
+    git
+    firefox
+    pavucontrol
+    tldr
+    lazygit
+    xclip
+    btop
+    piper
+    wally-cli
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
