@@ -48,7 +48,7 @@
         modules = [
           # inputs.home-manager.nixosModules.default
           ./hosts/pc/configuration.nix
-          ./disk-config.nix
+          ./disko-config.nix
           disko.nixosModules.disko
         ];
       };
