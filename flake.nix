@@ -49,6 +49,7 @@
           # inputs.home-manager.nixosModules.default
           ./disk-config.nix
           disko.nixosModules.disko
+          ({ ... }: { boot.runSize = "100%";})
           ./hosts/pc/configuration.nix
           
         ];
