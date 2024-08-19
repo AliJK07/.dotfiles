@@ -47,9 +47,10 @@
         };
         modules = [
           # inputs.home-manager.nixosModules.default
-          ./hosts/pc/configuration.nix
           ./disk-config.nix
           disko.nixosModules.disko
+          ./hosts/pc/configuration.nix
+          
         ];
       };
       lap = lib.nixosSystem {
