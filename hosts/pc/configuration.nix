@@ -18,7 +18,7 @@
     ../../modules/nixos/settings/fonts.nix
     ../../modules/nixos/settings/screen.nix
     ../../modules/nixos/windowManagers/default.nix
-    ./hardware-configuration.nix
+    # ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
   ];
 
