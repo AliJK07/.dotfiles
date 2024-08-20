@@ -1,7 +1,7 @@
-{inputs, ...}: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
-    config = {
+    extraConfig = {
       init = {
         defaultBranch = "main";
       };
@@ -13,8 +13,11 @@
           ];
         };
       };
-      user.name = "ali";
-      user.email = "example@email.com";
+      credential.helper = "${
+        pkgs.git.override {withLibsecret = true;}
+      }/bin/git-credential-libsecret";
     };
+    userName = "ali";
+    userEmail = "example@email.com";
   };
 }

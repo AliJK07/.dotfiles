@@ -15,7 +15,7 @@
     ../../modules/nixos/drivers/zsa.nix
     ../../modules/nixos/drivers/duelsense.nix
     ../../modules/nixos/apps/steam.nix
-    ../../modules/nixos/apps/git.nix
+    # ../../modules/nixos/apps/git.nix
     ../../modules/nixos/settings/fonts.nix
     ../../modules/nixos/settings/screen.nix
     ../../modules/nixos/windowManagers/default.nix

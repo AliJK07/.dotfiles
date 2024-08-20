@@ -11,6 +11,7 @@
     ../../modules/home-manager/shells
     ../../modules/home-manager/apps/neovim/neovim.nix
     ../../modules/home-manager/apps/bitwarden.nix
+    ../../modules/home-manager/apps/git.nix
     ../../modules/home-manager/apps/retroarch.nix
     ../../modules/home-manager/settings/i3-2screens.nix
     ../../modules/home-manager/settings/themes.nix
