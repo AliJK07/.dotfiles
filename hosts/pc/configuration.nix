@@ -200,7 +200,6 @@
     wget
     kitty
     alacritty
-    git
     firefox
     pavucontrol
     tldr
