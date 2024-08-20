@@ -21,8 +21,9 @@
       url = "github:timtro/glslView-nvim";
       flake = false;
     };
-    disko.url = "github:nix-community/disko";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
+    #disko.url = "github:nix-community/disko";
+    #disko.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
@@ -31,6 +32,7 @@
     nixpkgs-stable,
     home-manager,
     disko,
+    sops-nix,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;
@@ -47,11 +49,9 @@
         };
         modules = [
           # inputs.home-manager.nixosModules.default
-          ./disk-config.nix
-          disko.nixosModules.disko
-          ({ ... }: { boot.runSize = "100%";})
+          #./disk-config.nix
+          #disko.nixosModules.disko
           ./hosts/pc/configuration.nix
-          
         ];
       };
       lap = lib.nixosSystem {

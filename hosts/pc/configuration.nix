@@ -15,13 +15,23 @@
     ../../modules/nixos/drivers/zsa.nix
     ../../modules/nixos/drivers/duelsense.nix
     ../../modules/nixos/apps/steam.nix
+    ../../modules/nixos/apps/git.nix
     ../../modules/nixos/settings/fonts.nix
     ../../modules/nixos/settings/screen.nix
     ../../modules/nixos/windowManagers/default.nix
-    # ./hardware-configuration.nix
+    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
+    inputs.sops-nix.nixosModules.sops
   ];
 
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    defaultSopsFormat = "yaml";
+
+    age.keyFile = "/home/ali/.config/sops/age/keys.txt";
+
+    secrets.email = {};
+  };
   services.fail2ban.enable = true;
   networking.firewall.enable = true;
 
@@ -174,6 +184,7 @@
   # $ nix search wget
 
   environment.systemPackages = with pkgs; [
+    sops
     nix-template
     microcodeIntel
     apvlv
