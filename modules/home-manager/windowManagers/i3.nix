@@ -8,6 +8,7 @@
 }: let
   cfg = nconfig.my.windowManager.i3.enable;
 in {
+  imports = [../runner/rofi.nix];
   config = lib.mkIf cfg {
     home.packages = with pkgs; [
       dunst
@@ -22,10 +23,6 @@ in {
           bottom = {
           };
         };
-      };
-      rofi = {
-        enable = true;
-        font = "JetBrainsMono Nerd Font 14";
       };
     };
     xsession.windowManager.i3 = {

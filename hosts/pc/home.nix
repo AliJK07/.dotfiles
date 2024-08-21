@@ -37,6 +37,7 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
+    vesktop
     nix-init
     libreoffice
     prismlauncher
