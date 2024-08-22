@@ -2,17 +2,13 @@
   description = "ali flake";
 
   inputs = {
+    helix.url = "github:helix-editor/helix/master";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nix-inspect = {
-      url = "github:bluskript/nix-inspect";
-      follows = "nixpkgs";
-    };
     hyprland = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-      follows = "nixpkgs";
     };
     nil_ls.url = "github:oxalica/nil";
     vim-processing.url = "github:sophacles/vim-processing";
@@ -27,12 +23,10 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     nixpkgs-stable,
     home-manager,
-    disko,
-    sops-nix,
+    # disko,
     ...
   } @ inputs: let
     lib = nixpkgs.lib;

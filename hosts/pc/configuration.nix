@@ -10,7 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ../../modules/nixos/drivers/nvidia.nix
-    # ../../modules/nixos/virtualization/libvirt.nix
+    ../../modules/nixos/virtualization/libvirt.nix
     ../../modules/nixos/drivers/audio.nix
     ../../modules/nixos/drivers/zsa.nix
     ../../modules/nixos/drivers/duelsense.nix
@@ -184,6 +184,7 @@
   # $ nix search wget
 
   environment.systemPackages = with pkgs; [
+    inputs.helix.packages."${pkgs.system}".helix
     sops
     nix-template
     microcodeIntel
@@ -208,6 +209,7 @@
     btop
     piper
     wally-cli
+    nix-inspect
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -82,7 +82,7 @@ in {
             "$Shift+Control+d" = "exec --no-startup-id shutdown now";
             "${mod}+Return" = "exec --no-startup-id kitty";
             "${mod}+q" = "kill";
-            "${mod}+space" = "exec --no-startup-id rofi -show run";
+            "${mod}+space" = "exec --no-startup-id rofi -show drun -show-icons";
             "${mod}+h" = "focus left";
             "${mod}+j" = "focus up";
             "${mod}+k" = "focus down";
