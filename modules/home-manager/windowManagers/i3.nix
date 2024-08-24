@@ -8,7 +8,10 @@
 }: let
   cfg = nconfig.my.windowManager.i3.enable;
 in {
-  imports = [../runner/rofi.nix];
+  imports = [
+    ../runner/rofi.nix
+    ../bars/polybar.nix
+  ];
   config = lib.mkIf cfg {
     home.packages = with pkgs; [
       dunst

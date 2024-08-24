@@ -13,8 +13,8 @@ in {
   config = lib.mkIf cfg {
     home.sessionVariables = {
       # MOZ_ENABLE_WAYLAND = 1;
-      GBM_BACKEND = "nvidia-drm";
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      # GBM_BACKEND = "nvidia-drm";
+      # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     };
 
     # programs.swaylock = {

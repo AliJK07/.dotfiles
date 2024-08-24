@@ -24,6 +24,13 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
+  programs.nh = {
+    enable = true;
+  };
+  environment.sessionVariables = {
+    FLAKE = "$HOME/.dotfiles";
+  };
+
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
@@ -47,9 +54,9 @@
     };
     settings = {
       auto-optimise-store = true;
-      substituters = ["https://nix-gaming.cachix.org"];
+      substituters = ["https://nix-gaming.cachix.org" "https://hyprland.cachix.org"];
       trusted-substituters = ["https://cache.garnix.io"];
-      trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="];
     };
   };
 
@@ -81,7 +88,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "pc"; # Define your hostname.
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

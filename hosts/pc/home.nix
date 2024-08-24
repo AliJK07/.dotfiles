@@ -7,7 +7,7 @@
   imports = [
     ../../modules/home-manager/terminals/kitty.nix
     ../../modules/home-manager/windowManagers/i3.nix
-    ../../modules/home-manager/windowManagers/hyprland.nix
+    # ../../modules/home-manager/windowManagers/hyprland.nix
     ../../modules/home-manager/shells
     ../../modules/home-manager/apps/neovim/neovim.nix
     ../../modules/home-manager/apps/bitwarden.nix
@@ -15,7 +15,7 @@
     ../../modules/home-manager/apps/retroarch.nix
     ../../modules/home-manager/settings/i3-2screens.nix
     ../../modules/home-manager/settings/themes.nix
-    ../../modules/home-manager/apps/librewolf.nix
+    # ../../modules/home-manager/apps/librewolf.nix
     ../../additional/scripts
   ];
 
