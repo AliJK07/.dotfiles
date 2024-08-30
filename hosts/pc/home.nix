@@ -11,6 +11,7 @@
     ../../modules/home-manager/shells
     ../../modules/home-manager/apps/neovim/neovim.nix
     ../../modules/home-manager/apps/bitwarden.nix
+    ../../modules/home-manager/apps/firefox.nix
     ../../modules/home-manager/apps/git.nix
     ../../modules/home-manager/apps/retroarch.nix
     ../../modules/home-manager/settings/i3-2screens.nix
@@ -37,6 +38,7 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
+    maim
     cool-retro-term
     vesktop
     nix-init

@@ -36,6 +36,11 @@ in {
         modifier = "Mod4";
         startup = [
           {
+            command = "polybarStart";
+            always = true;
+            notification = false;
+          }
+          {
             command = "firefox";
             always = false;
             notification = false;

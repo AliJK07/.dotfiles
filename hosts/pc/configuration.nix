@@ -99,7 +99,10 @@
     picom.enable = true;
     # xserver.enable = true;
     pipewire.wireplumber.enable = true;
+    flatpak.enable = true;
   };
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   programs = {
     gnome-disks.enable = true;
@@ -154,9 +157,9 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us,ara";
+    layout = "us";
     variant = "";
-    options = "grp:alt_shift_toggle";
+    # options = "grp:alt_shift_toggle";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -191,7 +194,9 @@
   # $ nix search wget
 
   environment.systemPackages = with pkgs; [
-    inputs.helix.packages."${pkgs.system}".helix
+    # inputs.helix.packages."${pkgs.system}".helix
+    libappindicator
+    libappindicator-gtk2
     sops
     nix-template
     microcodeIntel
@@ -208,7 +213,6 @@
     wget
     kitty
     alacritty
-    firefox
     pavucontrol
     tldr
     lazygit

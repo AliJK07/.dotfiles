@@ -1,6 +1,11 @@
-{...}: {
+{pkgs, ...}: {
   services.polybar = {
     enable = true;
-    script = "polybar bar &amp";
+    config = ./config.ini;
+    script = "";
+    package = pkgs.polybar.override {
+      i3Support = true;
+      pulseSupport = true;
+    };
   };
 }

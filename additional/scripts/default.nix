@@ -7,5 +7,6 @@
     (import ./runGodot.nix {inherit pkgs;})
     (import ./runGodotScene.nix {inherit pkgs;})
     (import ./toggleScreen.nix {inherit pkgs;})
+    (import ./polybarStart.nix {inherit pkgs;})
   ];
 }
