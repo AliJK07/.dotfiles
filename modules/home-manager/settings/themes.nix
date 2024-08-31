@@ -2,7 +2,9 @@
   pkgs,
   config,
   ...
-}: {
+}: let
+  suru = import ./../../../pkgs/suru {inherit pkgs;};
+in {
   gtk = {
     enable = true;
     cursorTheme.package = pkgs.bibata-cursors;
@@ -12,12 +14,12 @@
       name = "JetBrainsMono Nerd Font";
     };
     theme = {
-      package = pkgs.gruvbox-dark-gtk;
-      name = "gruvbox-dark"; # to get name build with nix build nixpkgs#<pkgname> to see name of pkg
+      package = pkgs.tokyonight-gtk-theme;
+      name = "Tokyonight-Dark"; # to get name build with nix build nixpkgs#<pkgname> to see name of pkg
     };
     iconTheme = {
-      package = pkgs.gruvbox-dark-icons-gtk;
-      name = "oomox-gruvbox-dark";
+      package = suru;
+      name = "Suru++";
     };
   };
   home.pointerCursor = {
@@ -30,4 +32,10 @@
     "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
+  home.packages = with pkgs; [
+    lxappearance
+    #   sassc
+    #   gtk-engine-murrine
+    #   gnome.gnome-themes-extra
+  ];
 }

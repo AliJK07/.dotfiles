@@ -5,12 +5,10 @@
   nconfig,
   inputs,
   ...
-}: let
-  cfg = nconfig.my.windowManager.hyprland.enable;
-in {
+}: {
   imports = [../runner/wofi.nix];
 
-  config = lib.mkIf cfg {
+  config = {
     home.sessionVariables = {
       # MOZ_ENABLE_WAYLAND = 1;
       # GBM_BACKEND = "nvidia-drm";

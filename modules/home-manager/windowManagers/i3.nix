@@ -1,18 +1,15 @@
 {
   config,
-  nconfig,
   pkgs,
   input,
   lib,
   ...
-}: let
-  cfg = nconfig.my.windowManager.i3.enable;
-in {
+}: {
   imports = [
     ../runner/rofi.nix
     ../bars/polybar.nix
   ];
-  config = lib.mkIf cfg {
+  config = {
     home.packages = with pkgs; [
       dunst
     ];
@@ -63,11 +60,26 @@ in {
         ];
         bars = [];
         assigns = {
+          "1" = [{class = "firefox";}];
           "3" = [{class = "steam";}];
           # "6" = [{title = ".*Godot_Engine$";}];
           # "5" = [{title = ".*\(Debug\)$";}];
           "7" = [{title = "^GodotVim$";}];
+          "9" = [{title = ".*QEMU/KVM$";}];
+          "8" = [{class = "Virt-manager";}];
         };
+        floating.criteria = [
+          {
+            title = "Steam - Update News";
+          }
+          {
+            title = "Friends List";
+            class = "steam";
+          }
+          {
+            class = "pavucontrol";
+          }
+        ];
         window = {
           titlebar = false;
         };

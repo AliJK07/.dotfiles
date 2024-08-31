@@ -20,7 +20,7 @@
     ../../modules/nixos/settings/screen.nix
     ../../modules/nixos/windowManagers/default.nix
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
+    # inputs.home-manager.nixosModules.default
     inputs.sops-nix.nixosModules.sops
   ];
 
@@ -175,17 +175,17 @@
     };
   };
 
-  home-manager = {
-    # also pass inputs to home-manager modules
-    extraSpecialArgs = {
-      inherit inputs;
-      nconfig = config;
-    };
-    users = {
-      "ali" = import ./home.nix;
-    };
-    backupFileExtension = "backup";
-  };
+  # home-manager = {
+  #   # also pass inputs to home-manager modules
+  #   extraSpecialArgs = {
+  #     inherit inputs;
+  #     nconfig = config;
+  #   };
+  #   users = {
+  #     "ali" = import ./home.nix;
+  #   };
+  #   backupFileExtension = "backup";
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -195,8 +195,7 @@
 
   environment.systemPackages = with pkgs; [
     # inputs.helix.packages."${pkgs.system}".helix
-    libappindicator
-    libappindicator-gtk2
+    nix-prefetch-github
     sops
     nix-template
     microcodeIntel
