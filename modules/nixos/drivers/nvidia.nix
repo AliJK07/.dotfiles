@@ -11,7 +11,7 @@
   # boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "nvme" "sd_mod" "sr_mod"];
   # boot.kernelParams = ["nvidia-drm.modeset=1"];
   hardware.nvidia = {
-    # open = true;
+    open = true;
     powerManagement.enable = true;
     modesetting.enable = true;
     nvidiaSettings = true;

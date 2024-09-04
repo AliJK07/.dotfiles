@@ -14,9 +14,6 @@ in {
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       xwayland.enable = true;
     };
-    hardware.nvidia = {
-      open = lib.mkForce true;
-    };
     services = {
       xserver.enable = true;
       displayManager.sddm = {
