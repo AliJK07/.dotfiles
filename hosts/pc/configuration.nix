@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     ../../modules/nixos/drivers/nvidia.nix
     ../../modules/nixos/virtualization/libvirt.nix
+    ../../modules/nixos/virtualization/podman.nix
     ../../modules/nixos/drivers/audio.nix
     ../../modules/nixos/drivers/zsa.nix
     ../../modules/nixos/drivers/duelsense.nix

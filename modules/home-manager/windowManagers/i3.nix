@@ -4,7 +4,9 @@
   input,
   lib,
   ...
-}: {
+}: let
+  browser = "zen";
+in {
   imports = [
     ../runner/rofi.nix
     ../bars/polybar.nix
@@ -33,12 +35,17 @@
         modifier = "Mod4";
         startup = [
           {
+            command = "autotiling";
+            always = false;
+            notification = false;
+          }
+          {
             command = "polybarStart";
             always = true;
             notification = false;
           }
           {
-            command = "firefox";
+            command = "${browser}";
             always = false;
             notification = false;
           }
@@ -60,7 +67,7 @@
         ];
         bars = [];
         assigns = {
-          "1" = [{class = "firefox";}];
+          "1" = [{class = "firefox";} {class = "zen-alpha";}];
           "3" = [{class = "steam";}];
           # "6" = [{title = ".*Godot_Engine$";}];
           # "5" = [{title = ".*\(Debug\)$";}];
@@ -126,7 +133,7 @@
         for_window [instance="term"] border pixel 5
         for_window [title=".*Godot Engine$"] move to workspace 5
         for_window [title=".*\(DEBUG\)$"] move to workspace 6
-        bindsym $mod+n [instance="term"] scratchpad show; [instance="term"] move position center
+        bindsym $mod+n [instance="^term$"] scratchpad show; [instance="^term$"] move position center
 
       '';
     };

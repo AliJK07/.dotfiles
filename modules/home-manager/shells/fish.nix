@@ -31,6 +31,7 @@
       fish_vi_key_bindings
       # bind --erase \cr
       set -U fish_greeting
+      export MANPAGER="nvim +Man!"
     '';
     shellAliases = {
       ll = "eza -l --icons=always -agh --git";

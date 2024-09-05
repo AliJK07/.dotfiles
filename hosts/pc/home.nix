@@ -38,6 +38,13 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
+    autotiling
+    inputs.zen-browser.packages."${system}".specific
+    w3m
+    ueberzugpp
+    ytfzf
+    pipe-viewer
+    distrobox
     xdotool
     lutris
     maim

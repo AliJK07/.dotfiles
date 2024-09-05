@@ -20,6 +20,7 @@
     #disko.url = "github:nix-community/disko";
     #disko.inputs.nixpkgs.follows = "nixpkgs";
     sops-nix.url = "github:Mic92/sops-nix";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = {

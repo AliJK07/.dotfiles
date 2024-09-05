@@ -12,6 +12,8 @@
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       source-han-sans-japanese
       source-han-serif-japanese
+      corefonts
+      vistafonts
     ];
     fontconfig = {
       defaultFonts = {
