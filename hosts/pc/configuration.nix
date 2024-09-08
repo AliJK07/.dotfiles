@@ -15,6 +15,7 @@
     ../../modules/nixos/drivers/audio.nix
     ../../modules/nixos/drivers/zsa.nix
     ../../modules/nixos/drivers/duelsense.nix
+    ../../modules/nixos/systemd/tmux.nix
     ../../modules/nixos/apps/steam.nix
     # ../../modules/nixos/apps/git.nix
     ../../modules/nixos/settings/fonts.nix
@@ -168,7 +169,7 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "us, ara";
     variant = "";
     # options = "grp:alt_shift_toggle";
   };

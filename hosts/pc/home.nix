@@ -10,6 +10,7 @@
     # ../../modules/home-manager/windowManagers/hyprland.nix
     ../../modules/home-manager/shells
     ../../modules/home-manager/apps/neovim/neovim.nix
+    # ../../modules/home-manager/apps/neovim/nixvim.nix
     ../../modules/home-manager/apps/bitwarden.nix
     ../../modules/home-manager/apps/firefox.nix
     ../../modules/home-manager/apps/qutebrowser.nix

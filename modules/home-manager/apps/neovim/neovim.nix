@@ -34,6 +34,7 @@
   programs.neovim = {
     enable = true;
     withPython3 = true;
+    withRuby = true;
 
     viAlias = true;
     vimAlias = true;
