@@ -44,8 +44,8 @@
   services.fail2ban.enable = true;
   networking.firewall.enable = true;
 
-  # my.windowManager.hyprland.enable = true;
-  my.windowManager.i3.enable = true;
+  my.windowManager.hyprland.enable = true;
+  # my.windowManager.i3.enable = true;
   # configuration.nix
   boot.loader.systemd-boot.configurationLimit = 10;
   nix = {

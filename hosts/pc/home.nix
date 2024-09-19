@@ -7,7 +7,7 @@
   imports = [
     ../../modules/home-manager/terminals/kitty.nix
     ../../modules/home-manager/windowManagers/i3.nix
-    # ../../modules/home-manager/windowManagers/hyprland.nix
+    ../../modules/home-manager/windowManagers/hyprland.nix
     ../../modules/home-manager/shells
     ../../modules/home-manager/apps/neovim/neovim.nix
     # ../../modules/home-manager/apps/neovim/nixvim.nix
@@ -40,9 +40,14 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
+    pcsx2
     autotiling
     inputs.zen-browser.packages."${system}".specific
     w3m
+    xdelta
+    waypaper
+    steam-rom-manager
+    thunderbird
     ueberzugpp
     ytfzf
     pipe-viewer
