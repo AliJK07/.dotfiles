@@ -74,8 +74,9 @@
   # xdg.portal = {
   #   enable = true;
   #   xdgOpenUsePortal = true;
-  security.polkit.enable = true;
-  # };
+  security.polkit = {
+    enable = true;
+  };
   # powerManagement.cpuFreqGovernor = lib.mkForce "performance";
 
   environment.sessionVariables = {
@@ -95,7 +96,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services = {
-    avahi.enable = true;
+    # avahi.enable = true;
     udev.enable = true;
     ratbagd.enable = true;
     picom.enable = true;
@@ -207,6 +208,7 @@
 
   environment.systemPackages = with pkgs; [
     # inputs.helix.packages."${pkgs.system}".helix
+    polkit-kde-agent
     nix-prefetch-github
     sops
     nix-template

@@ -43,7 +43,9 @@
     pcsx2
     autotiling
     inputs.zen-browser.packages."${system}".specific
+    git-credential-manager
     w3m
+    gnome.gnome-keyring
     xdelta
     waypaper
     steam-rom-manager

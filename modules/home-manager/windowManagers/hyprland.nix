@@ -10,9 +10,8 @@
 
   config = {
     home.sessionVariables = {
-      # MOZ_ENABLE_WAYLAND = 1;
-      # GBM_BACKEND = "nvidia-drm";
-      # __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      NIXOS_OZONE_WL = 1;
+      MOZ_ENABLE_WAYLAND = 1;
     };
 
     # programs.swaylock = {
@@ -43,6 +42,7 @@
         # force_zero_scaling = true;
         # };
         exec-once = [
+          "exec-once=systemctl --user start plasma-polkit-agent"
           # "swaylock"
           "swww init"
           "[workspace 1 silent] firefox"

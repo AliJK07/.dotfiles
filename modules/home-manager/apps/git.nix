@@ -1,27 +1,35 @@
 {pkgs, ...}: {
-  home.file = {
-    ".gitconfig".text = ''
-      [user]
-      	email = example@email.com
-      	name = ali
-      [credential]
-      	helper = store
-      [init]
-      	defaultBranch = main
-      [filter "lfs"]
-      	clean = git-lfs clean -- %f
-      	smudge = git-lfs smudge -- %f
-      	process = git-lfs filter-process
-      	required = true
-    '';
+  # home.file = {
+  # ".gitconfig".text = ''
+  #   [user]
+  #   	email = example@email.com
+  #   	name = ali
+  #   [credential]
+  #   	helper = store
+  #   [init]
+  #   	defaultBranch = main
+  #   [filter "lfs"]
+  #   	clean = git-lfs clean -- %f
+  #   	smudge = git-lfs smudge -- %f
+  #   	process = git-lfs filter-process
+  #   	required = true
+  # '';
+  # };
+  programs = {
+    git = {
+      enable = true;
+      userName = "ali";
+      userEmail = "ali@mail.com";
+      extraConfig = {
+        init = {
+          defaultBranch = "main";
+        };
+        credential = {
+          helper = "store";
+        };
+      };
+    };
   };
-  programs.git = {
-    enable = true;
-  };
-  #   extraConfig = {
-  #     init = {
-  #       defaultBranch = "main";
-  #     };
   #     url = {
   #       "https://github.com/" = {
   #         insteadOf = [
