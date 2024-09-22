@@ -10,6 +10,7 @@
         parallel-n64
         thepowdertoy
         pcsx2
+        nestopia
       ];
     })
   ];
