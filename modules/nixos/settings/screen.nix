@@ -3,6 +3,9 @@
     {
       output = "DP-4";
       primary = true;
+      monitorConfig = ''
+        Option "DPMS" "false"
+      '';
     }
 
     {

@@ -37,6 +37,7 @@
       uris = ["qemu:///system"];
     };
   };
+  programs.bashmount.enable = true;
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
@@ -45,7 +46,7 @@
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
-    gnome.gnome-keyring
+    filezilla
     xdelta
     waypaper
     steam-rom-manager

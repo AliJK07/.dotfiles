@@ -5,7 +5,9 @@
   nconfig,
   inputs,
   ...
-}: {
+}: let
+  browser = "zen";
+in {
   imports = [../runner/wofi.nix];
 
   config = {
@@ -34,8 +36,10 @@
 
       settings = lib.mkOptionDefault {
         windowrulev2 = [
+          "workspace 3 silent,class:^(steam)$"
+          "workspace 1 silent,class:^(zen-alpha)$"
           "rounding 0, noborder, class:(processing-core-PApplet)"
-          "workspace 7,class:(Godot),fullscreen:1"
+          "workspace 7 silent,class:(Godot),fullscreen:1"
           # "workspace 6,title:(Godot)"
         ];
         # xwayland = {
@@ -45,7 +49,7 @@
           "exec-once=systemctl --user start plasma-polkit-agent"
           # "swaylock"
           "swww init"
-          "[workspace 1 silent] firefox"
+          "[workspace 1 silent] ${browser}"
           "histclip"
           "dunst"
         ];

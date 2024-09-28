@@ -26,6 +26,15 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+    ];
+  };
+
   programs.nh = {
     enable = true;
   };
@@ -44,8 +53,8 @@
   services.fail2ban.enable = true;
   networking.firewall.enable = true;
 
-  my.windowManager.hyprland.enable = true;
-  # my.windowManager.i3.enable = true;
+  # my.windowManager.hyprland.enable = true;
+  my.windowManager.i3.enable = true;
   # configuration.nix
   boot.loader.systemd-boot.configurationLimit = 10;
   nix = {
@@ -172,7 +181,7 @@
   services.xserver.xkb = {
     layout = "us, ara";
     variant = "";
-    # options = "grp:alt_shift_toggle";
+    options = "grp:alt_shift_toggle";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

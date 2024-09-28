@@ -17,6 +17,6 @@
       name = "JetBrainsMono Nerd Font";
       size = 14;
     };
-    theme = "Tokyo Night";
+    themeFile = "tokyo_night_night";
   };
 }
