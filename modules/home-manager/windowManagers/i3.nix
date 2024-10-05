@@ -35,6 +35,11 @@ in {
         modifier = "Mod4";
         startup = [
           {
+            command = "steam";
+            always = false;
+            notification = false;
+          }
+          {
             command = "autotiling";
             always = false;
             notification = false;

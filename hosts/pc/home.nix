@@ -7,7 +7,7 @@
   imports = [
     ../../modules/home-manager/terminals/kitty.nix
     ../../modules/home-manager/windowManagers/i3.nix
-    ../../modules/home-manager/windowManagers/hyprland.nix
+    # ../../modules/home-manager/windowManagers/hyprland.nix
     ../../modules/home-manager/shells
     ../../modules/home-manager/apps/neovim/neovim.nix
     # ../../modules/home-manager/apps/neovim/nixvim.nix
@@ -46,6 +46,9 @@
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    pomodoro-gtk
+    brave
+    protonup-qt
     filezilla
     xdelta
     waypaper

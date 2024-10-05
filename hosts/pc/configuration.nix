@@ -96,7 +96,7 @@
   users.extraUsers.ali.extraGroups = ["jackaudio" "gamemode"];
 
   # Bootloader.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 

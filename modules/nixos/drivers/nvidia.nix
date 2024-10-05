@@ -10,12 +10,18 @@
   # boot.kernelModules = ["nvidia_uvm" "nvidia_modeset" "nvidia_drm" "nvidia" "glaxnimate"];
   # boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "nvme" "sd_mod" "sr_mod"];
   # boot.kernelParams = ["nvidia-drm.modeset=1"];
-  hardware.nvidia = {
-    open = false;
-    powerManagement.enable = true;
-    modesetting.enable = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    nvidia = {
+      open = false;
+      powerManagement.enable = true;
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
   };
   services.xserver.videoDrivers = ["nvidia"];
 
