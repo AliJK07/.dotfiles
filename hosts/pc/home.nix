@@ -46,6 +46,9 @@
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    grim
+    mars-mips
+    dualsensectl
     pomodoro-gtk
     brave
     protonup-qt

@@ -16,7 +16,7 @@
       enable32Bit = true;
     };
     nvidia = {
-      open = false;
+      open = true;
       powerManagement.enable = true;
       modesetting.enable = true;
       nvidiaSettings = true;

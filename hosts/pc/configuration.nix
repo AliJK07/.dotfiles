@@ -14,7 +14,7 @@
     ../../modules/nixos/virtualization/podman.nix
     ../../modules/nixos/drivers/audio.nix
     ../../modules/nixos/drivers/zsa.nix
-    ../../modules/nixos/drivers/duelsense.nix
+    # ../../modules/nixos/drivers/duelsense.nix
     ../../modules/nixos/systemd/tmux.nix
     ../../modules/nixos/apps/steam.nix
     # ../../modules/nixos/apps/git.nix
