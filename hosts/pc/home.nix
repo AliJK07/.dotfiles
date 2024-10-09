@@ -46,6 +46,11 @@
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    barrier
+    alsa-utils
+    touchosc
+    qmidinet
+    vcv-rack
     grim
     mars-mips
     dualsensectl

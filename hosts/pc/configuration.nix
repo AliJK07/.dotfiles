@@ -51,7 +51,11 @@
     secrets.email = {};
   };
   services.fail2ban.enable = true;
-  networking.firewall.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedUDPPorts = [24800];
+    allowedTCPPorts = [24800];
+  };
 
   # my.windowManager.hyprland.enable = true;
   my.windowManager.i3.enable = true;
