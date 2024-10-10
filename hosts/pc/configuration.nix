@@ -109,7 +109,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services = {
-    # avahi.enable = true;
+    avahi.enable = true;
     udev.enable = true;
     ratbagd.enable = true;
     picom.enable = true;

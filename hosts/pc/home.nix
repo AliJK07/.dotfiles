@@ -3,7 +3,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  rtpmidid = pkgs.callPackage ../../pkgs/rtpmidid {};
+in {
   imports = [
     ../../modules/home-manager/terminals/kitty.nix
     ../../modules/home-manager/windowManagers/i3.nix
@@ -46,6 +48,8 @@
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    usbutils
+    rtpmidid
     barrier
     alsa-utils
     touchosc
