@@ -73,7 +73,7 @@ in {
         bars = [];
         assigns = {
           "1" = [{class = "firefox";} {class = "zen-alpha";}];
-          "3" = [{class = "steam";}];
+          "3" = [{class = "^steam$";}];
           # "6" = [{title = ".*Godot_Engine$";}];
           # "5" = [{title = ".*\(Debug\)$";}];
           "7" = [{title = "^GodotVim$";}];

@@ -40,6 +40,10 @@
       gd = "nvim --listen ~/.cache/nvim/godot.pipe .";
       dotl = "lazygit -p ~/.dotfiles";
       fu = "nix flake update ~/.dotfiles";
+      ".." = "cd ..";
+      "..." = "cd ../../..";
+      "...." = "cd ../../../..";
+      "....." = "cd ../../../../..";
     };
   };
 }

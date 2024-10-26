@@ -24,7 +24,11 @@
     ./hardware-configuration.nix
     # inputs.home-manager.nixosModules.default
     inputs.sops-nix.nixosModules.sops
+    inputs.musnix.nixosModules.musnix
   ];
+
+  # services.desktopManager.plasma6.enable = true;
+  musnix.enable = true;
 
   i18n.inputMethod = {
     type = "fcitx5";
@@ -58,6 +62,7 @@
   };
 
   # my.windowManager.hyprland.enable = true;
+  # my.windowManager.sway.enable = true;
   my.windowManager.i3.enable = true;
   # configuration.nix
   boot.loader.systemd-boot.configurationLimit = 10;
@@ -112,7 +117,6 @@
     avahi.enable = true;
     udev.enable = true;
     ratbagd.enable = true;
-    picom.enable = true;
     # xserver.enable = true;
     pipewire.wireplumber.enable = true;
     flatpak.enable = true;

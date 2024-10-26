@@ -9,11 +9,8 @@ in {
   options.my.windowManager.i3.enable = lib.mkEnableOption "Enables i3 as window manager";
   config = lib.mkIf cfg {
     services = {
-      displayManager.sddm = {
-        enable = true;
-        theme = "chili";
-      };
       xserver = {
+        displayManager.lightdm.enable = true;
         enable = true;
         windowManager.i3 = {
           enable = true;

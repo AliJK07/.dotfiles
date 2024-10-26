@@ -16,7 +16,7 @@
       enable32Bit = true;
     };
     nvidia = {
-      open = true;
+      open = false;
       powerManagement.enable = true;
       modesetting.enable = true;
       nvidiaSettings = true;
@@ -25,7 +25,10 @@
   };
   services.xserver.videoDrivers = ["nvidia"];
 
-  # environment.systemPackages = with pkgs; [
-  # nvidia-vaapi-driver
-  # ];
+  environment.systemPackages = with pkgs; [
+    # nvidia-vaapi-driver
+    # vulkan-loader
+    # vulkan-tools
+    # linuxKernel.packages.linux_xanmod.nvidia_x11_vulkan_beta
+  ];
 }

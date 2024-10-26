@@ -12,8 +12,12 @@ in {
 
   config = {
     home.sessionVariables = {
-      NIXOS_OZONE_WL = 1;
-      MOZ_ENABLE_WAYLAND = 1;
+      # WLR_RENDERER = "vulkan";
+      # XDG_SESSION_TYPE = "wayland";
+      # GTK_USE_PORTAL = "1";
+      # NIXOS_XDG_OPEN_USE_PORTAL = "1";
+      # NIXOS_OZONE_WL = 1;
+      # MOZ_ENABLE_WAYLAND = 1;
     };
 
     # programs.swaylock = {
@@ -32,9 +36,11 @@ in {
     wayland.windowManager.hyprland = {
       enable = true;
       # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       # systemd.enable = true;
 
       settings = lib.mkOptionDefault {
+        # env = ["NVD_BACKEND,direct" "LIBVA_DRIVER_NAME,nvidia" "XDG_SESSION_TYPE,wayland" "GBM_BACKEND,nvidia-drm" "__GLX_VENDOR_LIBRARY_NAME,nvidia"];
         windowrulev2 = [
           "workspace 3 silent,class:^(steam)$"
           "workspace 1 silent,class:^(zen-alpha)$"
@@ -158,8 +164,8 @@ in {
           "$mainMod, mouse:273, resizewindow"
         ];
         monitor = [
-          "DP-3,2560x1440@165,0x0,auto"
-          "HDMI-A-1,1920x1080@60,2560x210,auto"
+          "DP-3,2560x1440@165,0x0,1"
+          "HDMI-A-1,1920x1080@60,2560x210,1"
         ];
         workspace = [
           "1,monitor:DP-3"

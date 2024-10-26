@@ -8,7 +8,7 @@
   pkg-config,
   avahi,
   fmt,
-  alsaLib,
+  alsa-lib,
   # licenses,
 }:
 stdenv.mkDerivation rec {
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
     libsForQt5.qt5.wrapQtAppsHook
   ];
   buildInputs = [
-    alsaLib
+    alsa-lib
     qt5.qtbase
     qt5.qtmultimedia
     avahi
