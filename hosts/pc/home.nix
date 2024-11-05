@@ -51,6 +51,7 @@ in {
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    zoom-us
     komikku
     inkscape
     protontricks
