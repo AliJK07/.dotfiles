@@ -35,6 +35,11 @@ in {
         modifier = "Mod4";
         startup = [
           {
+            command = "nitrogen --restore";
+            always = false;
+            notification = false;
+          }
+          {
             command = "steam";
             always = false;
             notification = false;
@@ -56,11 +61,6 @@ in {
           }
           {
             command = "picom -b";
-            always = false;
-            notification = false;
-          }
-          {
-            command = "nitrogen --restore";
             always = false;
             notification = false;
           }
@@ -105,7 +105,7 @@ in {
         in
           lib.mkOptionDefault {
             "${mod}+m" = "exec --no-startup-id toggleScreen";
-            "${mod}+s" = "exec --no-startup-id flameshot screen";
+            "${mod}+s" = "exec --no-startup-id flameshot gui";
             "${mod}+g" = "exec --no-startup-id runGodot";
             "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status";
             "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status";
