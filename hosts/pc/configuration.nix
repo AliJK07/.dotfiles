@@ -61,9 +61,9 @@
     allowedTCPPorts = [24800];
   };
 
-  # my.windowManager.hyprland.enable = true;
+  my.windowManager.hyprland.enable = true;
   # my.windowManager.sway.enable = true;
-  my.windowManager.i3.enable = true;
+  # my.windowManager.i3.enable = true;
   # configuration.nix
   boot.loader.systemd-boot.configurationLimit = 10;
   nix = {

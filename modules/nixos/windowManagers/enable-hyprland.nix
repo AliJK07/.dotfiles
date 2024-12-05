@@ -9,7 +9,7 @@
   pkgs-unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in {
   imports = [
-    # ./wayland.nix
+    ./wayland.nix
   ];
   options.my.windowManager.hyprland.enable = lib.mkEnableOption "Enables hyprland as window manager";
   config = lib.mkIf cfg {

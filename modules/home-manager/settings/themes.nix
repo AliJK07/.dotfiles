@@ -7,8 +7,9 @@
 in {
   gtk = {
     enable = true;
-    cursorTheme.package = pkgs.bibata-cursors;
-    cursorTheme.name = "Bibata-Modern-Ice";
+    cursorTheme.package = pkgs.vimix-cursors;
+    cursorTheme.name = "Vimix-cursors";
+    cursorTheme.size = 24;
     font = {
       size = 12;
       name = "JetBrainsMono Nerd Font";
@@ -23,8 +24,8 @@ in {
     };
   };
   home.pointerCursor = {
-    name = "Bibata-Modern-Ice";
-    package = pkgs.bibata-cursors;
+    name = "Vimix-cursors";
+    package = pkgs.vimix-cursors;
     x11.enable = true;
   };
   xdg.configFile = {
@@ -32,7 +33,12 @@ in {
     "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
+  home.sessionVariables = {
+    HYPRCURSOR_THEME = "Vimix-cursors";
+    HYPRCURSOR_SIZE = "24";
+  };
   home.packages = with pkgs; [
+    xorg.xcursorgen
     lxappearance
     #   sassc
     #   gtk-engine-murrine
