@@ -9,7 +9,7 @@
     packages = with pkgs; [
       ubuntu_font_family
       liberation_ttf
-      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+      nerd-fonts.jetbrains-mono
       source-han-sans-japanese
       source-han-serif-japanese
       corefonts

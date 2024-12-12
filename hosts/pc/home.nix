@@ -8,7 +8,7 @@
 in {
   imports = [
     ../../modules/home-manager/terminals/kitty.nix
-    # ../../modules/home-manager/windowManagers/i3.nix
+    ../../modules/home-manager/windowManagers/i3.nix
     ../../modules/home-manager/windowManagers/hyprland.nix
     # ../../modules/home-manager/windowManagers/sway.nix
     ../../modules/home-manager/shells
@@ -19,7 +19,7 @@ in {
     # ../../modules/home-manager/apps/qutebrowser.nix
     ../../modules/home-manager/apps/git.nix
     ../../modules/home-manager/apps/retroarch.nix
-    # ../../modules/home-manager/settings/i3-2screens.nix
+    ../../modules/home-manager/settings/i3-2screens.nix
     ../../modules/home-manager/settings/themes.nix
     # ../../modules/home-manager/apps/librewolf.nix
     ../../additional/scripts
@@ -51,6 +51,7 @@ in {
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    heroic
     ncpamixer
     zoom-us
     komikku
