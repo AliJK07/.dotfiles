@@ -36,7 +36,7 @@ in {
         startup = [
           {
             command = "nitrogen --restore";
-            always = false;
+            always = true;
             notification = false;
           }
           {

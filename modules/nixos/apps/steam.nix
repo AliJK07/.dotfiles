@@ -5,7 +5,10 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
-  programs.gamemode.enable = true;
+  programs = {
+    gamemode.enable = true;
+    gamescope.enable = true;
+  };
   hardware.steam-hardware.enable = true;
   environment.systemPackages = [
     pkgs.libstrangle

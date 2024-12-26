@@ -51,6 +51,11 @@ in {
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    okular
+    brave
+    dotnet-runtime
+    # vintagestory
+    translate-shell
     heroic
     ncpamixer
     zoom-us
@@ -70,7 +75,6 @@ in {
     mars-mips
     dualsensectl
     pomodoro-gtk
-    brave
     protonup-qt
     filezilla
     xdelta

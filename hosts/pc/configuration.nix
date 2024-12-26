@@ -230,7 +230,6 @@
     sops
     nix-template
     microcodeIntel
-    apvlv
     killall
     unzip
     p7zip
