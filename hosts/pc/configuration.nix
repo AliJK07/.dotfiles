@@ -114,6 +114,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services = {
+    protonmail-bridge.enable = true;
     avahi.enable = true;
     udev.enable = true;
     ratbagd.enable = true;
