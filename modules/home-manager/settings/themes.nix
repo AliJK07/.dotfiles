@@ -18,10 +18,10 @@ in {
       package = pkgs.tokyonight-gtk-theme;
       name = "Tokyonight-Dark"; # to get name build with nix build nixpkgs#<pkgname> to see name of pkg
     };
-    iconTheme = {
-      package = suru;
-      name = "Suru++";
-    };
+    # iconTheme = {
+    #   package = suru;
+    #   name = "Suru++";
+    # };
   };
   home.pointerCursor = {
     name = "Vimix-cursors";

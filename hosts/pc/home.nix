@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-stable,
   inputs,
   ...
 }: let
@@ -18,7 +19,7 @@ in {
     ../../modules/home-manager/apps/firefox.nix
     # ../../modules/home-manager/apps/qutebrowser.nix
     ../../modules/home-manager/apps/git.nix
-    ../../modules/home-manager/apps/retroarch.nix
+    # ../../modules/home-manager/apps/retroarch.nix
     ../../modules/home-manager/settings/i3-2screens.nix
     ../../modules/home-manager/settings/themes.nix
     # ../../modules/home-manager/apps/librewolf.nix
@@ -51,10 +52,11 @@ in {
     inputs.zen-browser.packages."${system}".specific
     git-credential-manager
     w3m
+    arandr
     okular
     brave
     dotnet-runtime
-    # vintagestory
+    pkgs-stable.vintagestory
     translate-shell
     heroic
     ncpamixer
@@ -64,9 +66,8 @@ in {
     protontricks
     unrar
     bottles
-    ardour
     usbutils
-    rtpmidid
+    # rtpmidid
     barrier
     touchosc
     qmidinet

@@ -140,11 +140,11 @@
     java.enable = true;
     dconf.enable = true;
     gamemode.enable = true;
-    weylus = {
-      enable = true;
-      users = ["ali"];
-      openFirewall = true;
-    };
+    # weylus = {
+    #   enable = true;
+    #   users = ["ali"];
+    #   openFirewall = true;
+    # };
   };
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
